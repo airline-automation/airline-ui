@@ -1,7 +1,12 @@
 import React from 'react';
+import SearchMenu from '../../components/SearchMenu';
 
 const Home = () => {
-    return <div>Home</div>;
+    return (
+        <section className="home">
+            <SearchMenu />
+        </section>
+    );
 };
 
 export default Home;
