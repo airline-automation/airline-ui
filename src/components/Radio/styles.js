@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const RadioContainer = styled.div`
     ${({ padding }) =>
@@ -33,7 +33,7 @@ export const RadioBox = styled.div`
     padding: 2.5px;
 
     &::after {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         display: block;

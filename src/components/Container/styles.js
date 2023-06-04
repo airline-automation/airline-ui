@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 const JointStyling = css`
     display: inline-flex;
     flex-direction: ${({ direction }) =>
-        direction === 'row' ? 'row' : 'column'};
+        direction === "row" ? "row" : "column"};
 
     ${({ borderRadius }) =>
         borderRadius &&
@@ -52,7 +52,7 @@ const JointStyling = css`
     `}
 
     max-width: ${({ maxwidth }) => {
-        if (!maxwidth) return '100%';
+        if (!maxwidth) return "100%";
         return maxwidth;
     }};
 `;

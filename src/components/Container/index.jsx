@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyledContainer } from './styles';
+import React from "react";
+import { StyledContainer } from "./styles";
 
 const Container = ({
     children,
@@ -25,7 +25,8 @@ const Container = ({
             justify={justify}
             align={align}
             padding={padding}
-            margin={margin}>
+            margin={margin}
+        >
             {children}
         </StyledContainer>
     );

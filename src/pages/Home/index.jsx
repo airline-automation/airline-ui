@@ -1,5 +1,5 @@
-import React from 'react';
-import SearchMenu from '../../components/SearchMenu';
+import SearchMenu from "components/SearchMenu";
+import React from "react";
 
 const Home = () => {
     return (

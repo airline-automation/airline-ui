@@ -1,13 +1,13 @@
-import React from 'react';
-import { Label, StyledInput } from './styles';
-import Container from '../Container';
-import { Text } from '../Typography/styles';
+import React from "react";
+import { Label, StyledInput } from "./styles";
+import Container from "components/Container";
+import { Text } from "components/Typography/styles";
 
 const InputField = ({
     width,
     height,
     background,
-    label = '',
+    label = "",
     color,
     weight,
     size,
@@ -27,7 +27,8 @@ const InputField = ({
                     labelHeight={labelHeight}
                     labelWeight={labelWeight}
                     labelColor={labelColor}
-                    labelSize={labelSize}>
+                    labelSize={labelSize}
+                >
                     <StyledInput
                         width={width}
                         height={height}

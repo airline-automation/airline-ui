@@ -1,5 +1,5 @@
-import { createContext, useReducer } from 'react';
-import flightReducer from './UserReducer';
+import { createContext, useReducer } from "react";
+import flightReducer from "./UserReducer";
 
 const FlightContext = createContext();
 
@@ -18,7 +18,8 @@ export const FlightProvider = ({ children }) => {
             value={{
                 ...state,
                 dispatch,
-            }}>
+            }}
+        >
             {children}
         </FlightContext.Provider>
     );

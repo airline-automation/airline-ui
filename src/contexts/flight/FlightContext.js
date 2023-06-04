@@ -1,25 +1,25 @@
-import { createContext, useReducer, useContext } from 'react';
-import flightReducer from './FlightReducer';
+import { createContext, useReducer, useContext } from "react";
+import flightReducer from "./FlightReducer";
 
 const FlightContext = createContext();
 
 export const FlightProvider = ({ children }) => {
     const initialState = {
-        departure: '',
-        destionation: '',
-        date: '',
+        departure: "",
+        destionation: "",
+        date: "",
         flight_type: [
             {
-                label: 'Gidiş-Dönüş',
-                key: 'gidis-donus',
+                label: "Gidiş-Dönüş",
+                key: "gidis-donus",
             },
             {
-                label: 'Tek yön',
-                key: 'tek-yon',
+                label: "Tek yön",
+                key: "tek-yon",
             },
             {
-                label: 'Çoklu uçuş',
-                key: 'coklu-ucus',
+                label: "Çoklu uçuş",
+                key: "coklu-ucus",
             },
         ],
         passengers: {
@@ -28,7 +28,7 @@ export const FlightProvider = ({ children }) => {
             baby: 0,
             student: 0,
         },
-        flight_class: '', // eco, business
+        flight_class: "", // eco, business
         isLoading: false,
     };
 
@@ -39,7 +39,8 @@ export const FlightProvider = ({ children }) => {
             value={{
                 ...state,
                 dispatch,
-            }}>
+            }}
+        >
             {children}
         </FlightContext.Provider>
     );

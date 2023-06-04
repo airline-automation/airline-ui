@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledCard = styled.div`
     display: inline-flex;
     flex-direction: ${({ direction }) =>
-        direction === 'row' ? 'row' : 'column'};
+        direction === "row" ? "row" : "column"};
 
     ${({ borderRadius }) =>
         borderRadius &&

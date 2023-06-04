@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
-import LoadingSpinner from '../components/LoadingSpinner';
+import LoadingSpinner from "components/LoadingSpinner";
+import { Suspense } from "react";
 
 function LazyLoadComponent(Component) {
     return function SuspenseComponent(props) {

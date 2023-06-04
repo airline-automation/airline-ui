@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyledCard } from './styles';
+import React from "react";
+import { StyledCard } from "./styles";
 
 const Container = ({
     children,
@@ -19,7 +19,8 @@ const Container = ({
             width={width}
             height={height}
             justify={justify}
-            align={align}>
+            align={align}
+        >
             {children}
         </StyledCard>
     );

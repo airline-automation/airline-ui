@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Label = styled.label`
     position: relative;
@@ -26,19 +26,19 @@ export const StyledInput = styled.input`
     max-width: 100%;
 
     width: ${({ width }) => {
-        if (!width) return '100%';
+        if (!width) return "100%";
         return width;
     }};
     height: ${({ height }) => {
-        if (!height) return '100%';
+        if (!height) return "100%";
         return height;
     }};
     padding: ${({ padding }) => {
-        if (!padding) return '10px 20px';
+        if (!padding) return "10px 20px";
         return padding;
     }};
     border: ${({ border }) => {
-        if (!border) return 'none';
+        if (!border) return "none";
         return border;
     }};
     background: ${({ background, theme }) => {

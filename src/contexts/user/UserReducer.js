@@ -1,28 +1,28 @@
 const flightReducer = (state, action) => {
     switch (action.type) {
-        case 'GET_USERS':
+        case "GET_USERS":
             return {
                 ...state,
                 users: action.payload,
                 isLoading: false,
             };
-        case 'SET_LOADING':
+        case "SET_LOADING":
             return {
                 ...state,
                 isLoading: true,
             };
-        case 'CLEAR_USERS':
+        case "CLEAR_USERS":
             return {
                 ...state,
                 users: [],
             };
-        case 'GET_USER':
+        case "GET_USER":
             return {
                 ...state,
                 user: action.payload,
                 isLoading: false,
             };
-        case 'GET_REPOS':
+        case "GET_REPOS":
             return {
                 ...state,
                 repos: action.payload,

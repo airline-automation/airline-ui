@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 function handleClickOutside(event, element, handler) {
     if (element && !element.contains(event.target)) {
@@ -15,10 +15,10 @@ function useClickOutside(id, handler) {
         const eventListener = (event) =>
             handleClickOutside(event, element, handler);
 
-        window.addEventListener('mousedown', eventListener);
+        window.addEventListener("mousedown", eventListener);
         // Remove event listener on cleanup
         return () => {
-            window.removeEventListener('mousedown', eventListener);
+            window.removeEventListener("mousedown", eventListener);
         };
     }, [id, handler]);
 }

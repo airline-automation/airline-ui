@@ -1,25 +1,19 @@
-import React, { lazy, useEffect, useState } from 'react';
+import React, { lazy, useEffect, useState } from "react";
 
-import LazyLoadComponent from '../../utils/lazyLoadComponent';
+import LazyLoadComponent from "utils/lazyLoadComponent";
 
-import { menu } from './constants';
-import { MenuBar, MenuItem } from './styles';
-import { Text } from '../Typography/styles';
-import Container from '../Container';
+import { menu } from "./constants";
+import { MenuBar, MenuItem } from "./styles";
+import Container from "components/Container";
+import { Text } from "components/Typography/styles";
 
-const FlightSearch = LazyLoadComponent(
-    lazy(() => import('../Form/Search/FlightSearch'))
-);
-const FlightHotel = LazyLoadComponent(
-    lazy(() => import('../Form/Search/FlightHotel'))
-);
-const CheckIn = LazyLoadComponent(lazy(() => import('../Form/Search/CheckIn')));
-const FlightStatus = LazyLoadComponent(
-    lazy(() => import('../Form/Search/FlightStatus'))
-);
+const FlightSearch = LazyLoadComponent(lazy(() => import("./FlightSearch")));
+const FlightHotel = LazyLoadComponent(lazy(() => import("./FlightHotel")));
+const CheckIn = LazyLoadComponent(lazy(() => import("./CheckIn")));
+const FlightStatus = LazyLoadComponent(lazy(() => import("./FlightStatus")));
 
 const SearchMenu = () => {
-    const [selectedMenu, setSelectedMenu] = useState('');
+    const [selectedMenu, setSelectedMenu] = useState("");
 
     useEffect(() => {
         setSelectedMenu(menu[0].key);
@@ -36,26 +30,24 @@ const SearchMenu = () => {
                     <MenuItem
                         key={item.key}
                         className={`${
-                            selectedMenu === item.key ? 'active' : ''
+                            selectedMenu === item.key ? "active" : ""
                         }`}
-                        onClick={handleMenuClick.bind(this, item.key)}>
-                        <Text
-                            size="14px"
-                            weight="600"
-                            lineheight="1.6">
+                        onClick={handleMenuClick.bind(this, item.key)}
+                    >
+                        <Text size='14px' weight='600' lineheight='1.6'>
                             {item.label}
                         </Text>
                     </MenuItem>
                 ))}
             </MenuBar>
             <div>
-                {selectedMenu === 'flight_search' ? (
+                {selectedMenu === "flight_search" ? (
                     <FlightSearch />
-                ) : selectedMenu === 'flight_hotel' ? (
+                ) : selectedMenu === "flight_hotel" ? (
                     <FlightHotel />
-                ) : selectedMenu === 'check_in' ? (
+                ) : selectedMenu === "check_in" ? (
                     <CheckIn />
-                ) : selectedMenu === 'flight_status' ? (
+                ) : selectedMenu === "flight_status" ? (
                     <FlightStatus />
                 ) : (
                     <></>

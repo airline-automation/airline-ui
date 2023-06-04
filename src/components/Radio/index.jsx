@@ -1,5 +1,5 @@
-import React from 'react';
-import { Input, Label, RadioBox, RadioContainer } from './styles';
+import React from "react";
+import { Input, Label, RadioBox, RadioContainer } from "./styles";
 
 const Radio = ({
     children,
@@ -19,13 +19,11 @@ const Radio = ({
     };
 
     return (
-        <RadioContainer
-            padding={padding}
-            margin={margin}>
+        <RadioContainer padding={padding} margin={margin}>
             <Label id={value}>
                 <Input
-                    type="radio"
-                    name="location"
+                    type='radio'
+                    name='location'
                     id={value}
                     value={value}
                     onChange={handleChange}
